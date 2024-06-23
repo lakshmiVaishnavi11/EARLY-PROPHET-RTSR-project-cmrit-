@@ -1,4 +1,4 @@
-# EARLY-PROPHET- (rise-early-fly-happy)
+# EARLY-PROPHET- (rise early,fly happy)
 
 
 
