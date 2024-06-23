@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Rise Early Fly Happy</h1>
+        <p class="tagline">Get the best deals on your flights!</p>
+        <form id="review-form" action="" method="POST">
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" required><br><br>
+            <label for="departure_time">Departure Time:</label>
+            <input type="datetime-local" id="departure_time" name="departure_time" required><br><br>
+            <label for="arrival_time">Arrival Time:</label>
+            <input type="datetime-local" id="arrival_time" name="arrival_time" required><br><br>
+            <label for="date_of_journey">Date of Journey:</label>
+            <input type="date" id="date_of_journey" name="date_of_journey" required><br><br>
+            <label for="total_stops">Total Stops:</label>
+            <select id="total_stops" name="total_stops" required>
+                <option value="non-stop">Non-stop</option>
+                <option value="1 stop">1 stop</option>
+                <option value="2 stops">2 stops</option>
+                <option value="3 stops">3 stops</option>
+                <option value="4 stops">4 stops</option>
+            </select><br><br>
+            <label for="airline">Airline:</label>
+            <select id="airline" name="airline" required>
+                <option value="Air India">Air India</option>
+                <option value="IndiGo">IndiGo</option>
+                <option value="SpiceJet">SpiceJet</option>
+                <option value="Vistara">Vistara</option>
+            </select><br><br>
+            <label for="source">Source:</label>
+            <select id="source" name="source" required>
+                <option value="">Select Source</option>
+                <optgroup label="India">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </optgroup>
+                <optgroup label="International">
+                    <option value="New York">New York</option>
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Tokyo">Tokyo</option>
+                </optgroup>
+            </select><br><br>
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="">Select Destination</option>
+                <optgroup label="India">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </optgroup>
+                <optgroup label="International">
+                    <option value="New York">New York</option>
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Tokyo">Tokyo</option>
+                </optgroup>
+            </select><br><br>
+            <input type="submit" value="Predict Price">
+        </form>
+        {% if predict_text %}
+            <p class="predict-text">{{ predict_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
