@@ -1,0 +1,83 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #9e6060;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(168, 115, 115, 0.1);
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #def706;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-size: 18px;
+    color: #dacd57;
+    margin-bottom: 20px;
+  }
+  
+  .tagline::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .predict-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  /* Add some style to the heading */
+  h1 {
+    background-image: linear-gradient(to right, #ff69b4, #ff99cc);
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .tagline {
+    font-style: italic;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .tagline::before {
+    background-color: #ff69b4;
+  }
